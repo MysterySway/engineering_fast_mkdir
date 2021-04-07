@@ -1,9 +1,7 @@
 #建立目标文件夹树
 
 import os
-import sys
 import time
-import shutil
 
 
 #文件夹目录
