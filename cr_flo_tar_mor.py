@@ -25,7 +25,7 @@ fol_name_main_15 = '15、内部功能、附属配套、装修及使用情况'
 #传参：目标文件夹路径,项目名称，移交人，拍摄人，移交日期，
 #输出：最终目标目录起始路径
 
-def cr_flo_tar_mor(tar_path,project_name,hand_over_person,person_who):
+def cr_flo_tar_mor(tar_path,project_name,hand_over_person):
     print('目标文件夹已确认为:',tar_path)
     print('命名最上层文件夹名称')
     tar_base_flo_name = project_name + '工程声像档案（移交人：' + hand_over_person + '，' + '移交日期：'+ time.strftime('%Y.%m.%d',time.localtime()) +')'
@@ -94,7 +94,8 @@ def cr_flo_tar_mor(tar_path,project_name,hand_over_person,person_who):
 
 #主题函数
 #判断文件夹内是否已经存在文件夹
-def jud_flo_tar(tar_path,project_name,hand_over_person,person_who):
+#创建目标文件夹模块
+def jud_flo_tar(tar_path,project_name,hand_over_person):
     list1 = os.listdir(tar_path)
     list2 = []
     if list1 != list2:
@@ -102,5 +103,5 @@ def jud_flo_tar(tar_path,project_name,hand_over_person,person_who):
         base_list = []
     else:
         base_list = []
-        base_list = cr_flo_tar_mor(tar_path,project_name,hand_over_person,person_who)
+        base_list = cr_flo_tar_mor(tar_path,project_name,hand_over_person)
     return base_list
