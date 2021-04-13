@@ -1,4 +1,4 @@
-#建立目标文件夹树
+#创建目标文件夹模块
 
 import os
 import time
