@@ -1,5 +1,6 @@
-import os
+#输入信息模块
 
+import os
 
 #project_name :项目名称 str
 #staff：移交人 str
