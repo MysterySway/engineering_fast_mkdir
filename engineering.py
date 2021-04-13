@@ -100,8 +100,6 @@ else:
     print('\n信息已确认\n')
 
 
-
-'''
 #切换文件夹
 print('目标路径',target_path,'正在切换工作目录')
 os.chdir(target_path)
@@ -110,7 +108,7 @@ print('\n正在准备向目标文件夹中创建主体框架\n')
 
 #要创建的文件夹列表
 print('创建工程文件夹')
-project_name_add = project_name +'工程声像档案（移交人：'+ staff +'，移交日期：' +time.strftime('%Y.%m.%d',time.localtime()) +')'              #创建人
+project_name_add = project_name +'工程声像档案（移交人：'+ staff +'，移交日期：' + time.strftime('%Y.%m.%d',time.localtime()) +')'              #创建人
 os.mkdir(project_name_add)
 target_path_main =target_path +'\\'+ project_name_add
 print('切换目录')
@@ -165,7 +163,6 @@ os.mkdir(folder_name_main_14)
 os.mkdir(folder_name_main_15)
 
 print('创建框架完成')
-'''
 
 #素材文件夹操作
 os.chdir(material_path)
