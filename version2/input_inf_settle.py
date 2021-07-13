@@ -1,20 +1,21 @@
+
+
+
 #输入信息模块
+#调用函数：def input_function()
+#返回值 project_name：项目名称
+#       staff：移交人
+#       mat_path：素材文件夹路径
+#       tar_path：目标文件夹路径
+#       list_floor：楼号列表
 
 import os
 
-#project_name :项目名称 str
-#staff：移交人 str
-#mat_path：素材路径 str
-#tar_path：目标路径 str
-#list_floor：楼号 list
-
-#主体函数
-#输入信息模块
 def input_function():
     #楼号输入函数
     def floor_sub(input_floor,list_floor):
         list_floor = []
-        while input_floor != 'pass':
+        while input_floor != 'pass' :
             list_floor.append(input_floor)
             input_floor = input('请继续输入楼号，退出请输入pass：')
         else:
@@ -27,7 +28,10 @@ def input_function():
     mat_path   = input('输入素材文件夹路径：')
     tar_path     = input('输入要建立文件夹的目标路径：')
     input_floor     = input('输入楼号(单个)：')
-
+    
+    #楼号函数的调用
+    list_floor=floor_sub(input_floor,list_floor = [0])
+    
     #输入信息函数
     def input_information():
         project_name = input('请输入项目名称：')
@@ -35,18 +39,11 @@ def input_function():
         mat_path = input('请输入素材文件夹路径：')
         tar_path = input('请输入要建立文件夹的目标路径：')
         input_floor = input('输入楼号(单个)：')
-        inf_list = [project_name,staff,mat_path,tar_path,input_floor]
-        print(inf_list)
-
-    #楼号函数的调用
-    list_floor=floor_sub(input_floor,list_floor = [0])
+        list_floor = floor_sub(input_floor,list_floor = [0])
+        inf_list = [project_name,staff,mat_path,tar_path,input_floor,list_floor]
+        return inf_list
 
     #主体信息的确定
-    '''
-    信息集合
-    information = [project_name,material_path,target_path]+list_floor
-    print(information)
-    '''
     print('\n请确认信息：')
     print('项目名称：' + project_name)
     print('移交人：' + staff)
@@ -55,13 +52,9 @@ def input_function():
     print('楼号：'+ str(list_floor))
     infcom = input('\n信息是否正确？Y/N：')
     while infcom != 'Y' and infcom !='y':
-        input_information()
-        list_floor=floor_sub(input_floor,list_floor = [0])
-        '''
-        信息集合
-        information = [project_name,material_path,target_path]+list_floor
-        print(information)
-        '''
+        inf_list = input_information()
+        project_name,staff,mat_path,tar_path,input_floor,list_floor = inf_list
+        #循环确认信息
         print('\n请确认信息：')
         print('项目名称：' + project_name)
         print('移交人：' + staff)
@@ -72,4 +65,3 @@ def input_function():
     else:
         print('\n信息已确认\n')
     return project_name,staff,mat_path,tar_path,list_floor
-

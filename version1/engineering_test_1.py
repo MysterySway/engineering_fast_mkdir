@@ -173,7 +173,7 @@ while '录像' and '照片' not in folder_directory:
     os.system('pause')
     folder_directory = os.listdir(material_path)
 else:
-    print('素材主文件校验成功')
+    print('素材主文件校验成功')                             #完成
 
 #切换到素材文件夹的子文件夹
 folder_name_material_pictur = material_path + '\\' + '照片'
@@ -212,12 +212,12 @@ for floor_number_loop_video in list_floor:
     material_name = 'video'
     pick_file(floor_number_loop_video,folder_name_material_video,material_name)
 
-
 #日志文件
 
 
 
-
+'''
 
 #移动编辑好的文件夹
 #def move_folder():
+'''
