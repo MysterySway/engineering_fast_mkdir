@@ -293,6 +293,11 @@ def move(mat_path,target_path,project_name,staff):
             move_fil_with_flo(project_path,folder_name_video_09)
         elif project == '单元可视通话':
             move_fil_with_flo(project_path,folder_name_video_09)
+        elif project == '智能通话':
+            move_fil_with_flo(project_path,folder_name_video_09)
+        elif project == '单元智能通话':
+            move_fil_with_flo(project_path,folder_name_video_09)
+
 
         elif project == '屋面排风':
             move_fil_with_flo(project_path,folder_name_video_10)
