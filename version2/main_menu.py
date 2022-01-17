@@ -22,6 +22,7 @@ version = 'v0.2.0.1'
 print('----------')
 print('欢迎使用快速创建工程影像工具')
 print('版本：' + version)
+print('Design for Dive.')
 print('----------\n')
 print('正在加载第三方库文件')
 
@@ -75,7 +76,7 @@ project_name,staff,mat_path,tar_path,list_floor = input_inf_settle.input_functio
 check_for_inf.check_fun(mat_path,tar_path)
 
 #复制素材函数
-copy_file.copy(mat_path)
+#copy_file.copy(mat_path)
 
 #创建楼号文件夹模块
 create_flo_fol.cr_mome_flo(mat_path,list_floor)

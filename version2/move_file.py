@@ -224,9 +224,11 @@ def move(mat_path,target_path,project_name,staff):
             move_fil_with_flo(project_path,folder_name_pictur_11)
         elif project == '烟感报警器':
             move_fil_with_flo(project_path,folder_name_pictur_11)
-        elif project == '消防栓':
+        elif project == '消火栓':
             move_fil_with_flo(project_path,folder_name_pictur_11)
         elif project == '喷淋':
+            move_fil_with_flo(project_path,folder_name_pictur_11)
+        elif project == '消防应急灯':
             move_fil_with_flo(project_path,folder_name_pictur_11)
 
         elif project == '竣工外貌':
@@ -316,9 +318,11 @@ def move(mat_path,target_path,project_name,staff):
             move_fil_with_flo(project_path,folder_name_video_11)
         elif project == '烟感报警器':
             move_fil_with_flo(project_path,folder_name_video_11)
-        elif project == '消防栓':
+        elif project == '消火栓':
             move_fil_with_flo(project_path,folder_name_video_11)
         elif project == '喷淋':
+            move_fil_with_flo(project_path,folder_name_video_11)
+        elif project == '消防应急灯':
             move_fil_with_flo(project_path,folder_name_video_11)
 
         elif project == '竣工外貌':
